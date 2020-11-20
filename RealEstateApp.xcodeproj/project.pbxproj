@@ -117,7 +117,6 @@
 				28E1EDF925606C4F001296C5 /* Helpers */,
 				28E1EDF825606C29001296C5 /* ServiceAndDB */,
 				28E1EDF725606C0A001296C5 /* SupportingFiles */,
-				28E1EDF225606B57001296C5 /* ViperScene */,
 				28822704254D6AC900D9773B /* Assets.xcassets */,
 				28822706254D6AC900D9773B /* LaunchScreen.storyboard */,
 				28822709254D6AC900D9773B /* Info.plist */,
@@ -222,6 +221,7 @@
 		28E2E12B2567BC9900881B8A /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				28E1EDF225606B57001296C5 /* ViperScene */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
