@@ -129,52 +129,34 @@ class VenturesPresenter: VenturesPresentation {
     //MARK:  Routing Functions
     func finishSelecting()
     {
-    guard let rt = router else { return }
-    let message = "You have Registered"
-
-    var subtitle = ""
     guard let dat = data else{return}
-    dat.ventures.forEach {
-    if let ven = $0.selectedVenture, let name = ven.name
-        {
-    subtitle.append("\($0.name ?? ""):\(name)")
-        }
-        }
+    let exc = dat.ventures.compactMap { ven -> ExclusionVM? in
+    guard let vid = ven.id, let sel = ven.selectedVenture, let oid = sel.id else{return nil}
+    return ExclusionVM(vid, oid)
+    }
+    exc.forEach{print($0.fId!, $0.oId!)}
+    let an = dat.exclusions.map{$0.exclusionSet.map{return ExclusionVM($0.fId ?? "", $0.oId ?? "")}}
+        print("Divider")
+    let commonExc = Array(an.filter{$0.allSatisfy { exl in exc.contains(exl)}})
+    guard let rt = router else { return }
+    if commonExc.count > 0
+    {
+    let names1 = commonExc[0][0].exclusionItemNames()
+    let names2 = commonExc[0][1].exclusionItemNames()
+    print(names1, names2)
+    if let n00 = names1.0, let n01 = names1.1, let n10 = names2.0, let n11 = names2.1
+    {
+    let subtitle = "\(n00) of \(n01) and \(n10) of \(n11) cant be selected.Try other options"
+    
+    let message = "Property Restriction"
     rt.showAlert(withMessage: message, andSubtitle: subtitle)
     }
-    
-    
-     //MARK:  ImproVIng Code
-    private func presentRestriction(exc: [Exclusion])
+    }
+    else
     {
-    guard let data = data else{return}
-    let name1 = data.ventures.first { ven -> Bool in
-        return ven.id == exc[0].fId
-        }?.options.first(where: {return $0.id == exc[0].oId})?.name
-    let name2 = data.ventures.first { ven -> Bool in
-    return ven.id == exc[1].fId
-    }?.options.first(where: {return $0.id == exc[1].oId})?.name
-    let message = "Property Mismatch"
-    let subtitle = "Property \(name1 ?? "") and Property \(name2 ?? "") cant be selected"
-    guard let ri = router else {return}
-    ri.showAlert(withMessage: message, andSubtitle: subtitle)
+    rt.finishRegistration()
+    }
     }
 }
-
-
-
-
-//MARK:- ExperimantalCode
-/*
-//    guard let dat = data else{return}
-//    let exc = dat.ventures.compactMap { ven -> Exclusion? in
-//    guard let vid = ven.id, let sel = ven.selectedVenture, let oid = sel.id else{return nil}
-//    return Exclusion(vid, oid)
-//        }
-//    print(Array(exc))
-//    print(Array(dat.exclusions))
-//    print(Array(dat.exclusions[0].exclusionSet))
-//    let commexc = Array(dat.exclusions).filter { Array($0.exclusionSet).allSatisfy { exl in Array(exc).contains(exl)}}
-//        //exc.forEach{print($0)}
-//    print("Common excs", commexc)
-*/
+    
+      

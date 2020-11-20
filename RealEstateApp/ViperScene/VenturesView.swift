@@ -34,7 +34,7 @@ extension RealEstateBuyingOptionsScreen: VenturesView
     tableView.reloadData()
     }
     func updateCells(atIndexpaths indexPaths: [IndexPath], withAnimationType type: VenturesPresenter.AnimationType) {
-        let anim = UITableView.RowAnimation.none
+        let anim = UITableView.RowAnimation.fade
         tableView.beginUpdates()
         switch type {
         case .insert:
@@ -79,5 +79,11 @@ extension RealEstateBuyingOptionsScreen
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
+    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: 0)
+//        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+//            cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: cell.contentView.frame.height)
+//        }, completion: nil)
     }
 }

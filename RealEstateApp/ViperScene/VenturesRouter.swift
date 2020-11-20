@@ -13,5 +13,7 @@ class VenturesRouter: VenturesWireframe {
     HelperClass.showAlertWithOneOption(title: message, subTitle: sub, controller: vi) { _ in
     }
     }
-    
+    func finishRegistration() {
+        view?.navigationController?.pushViewController(ConformationBuilder.makeVc(), animated: true)
+    }
 }

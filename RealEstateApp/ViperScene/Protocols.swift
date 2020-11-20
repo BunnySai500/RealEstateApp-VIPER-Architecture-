@@ -17,6 +17,7 @@ protocol VenturesUseCase: class {
 protocol VenturesWireframe: class {
     var view: UIViewController? {get}
     func showAlert(withMessage message: String, andSubtitle sub: String)
+    func finishRegistration()
 }
 
 protocol VenturesPresentation: class {

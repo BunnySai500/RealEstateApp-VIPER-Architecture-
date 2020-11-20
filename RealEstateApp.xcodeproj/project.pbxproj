@@ -26,6 +26,13 @@
 		28E1EDED2560696F001296C5 /* VenturesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1EDEC2560696F001296C5 /* VenturesInteractor.swift */; };
 		28E1EDEF25606985001296C5 /* VenturesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1EDEE25606985001296C5 /* VenturesRouter.swift */; };
 		28E1EDF1256069B1001296C5 /* VenturesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1EDF0256069B1001296C5 /* VenturesEntity.swift */; };
+		28E2E12725678B7400881B8A /* ExclusionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E12625678B7400881B8A /* ExclusionVM.swift */; };
+		28E2E12E2567BCFA00881B8A /* ConformationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E12D2567BCFA00881B8A /* ConformationProtocols.swift */; };
+		28E2E1302567BD1000881B8A /* ConformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E12F2567BD1000881B8A /* ConformationPresenter.swift */; };
+		28E2E1322567BD2E00881B8A /* ConformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E1312567BD2E00881B8A /* ConformationView.swift */; };
+		28E2E1342567BD7600881B8A /* ConformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E2E1332567BD7600881B8A /* ConformationView.xib */; };
+		28E2E1362567BFE300881B8A /* ConformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E1352567BFE300881B8A /* ConformationBuilder.swift */; };
+		28E2E1382567C07600881B8A /* ConformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E2E1372567C07600881B8A /* ConformationRouter.swift */; };
 		A0110C343416B246BA4CF5FB /* Pods_RealEstateApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED574A63E6BE970985E3323 /* Pods_RealEstateApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +58,13 @@
 		28E1EDEC2560696F001296C5 /* VenturesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturesInteractor.swift; sourceTree = "<group>"; };
 		28E1EDEE25606985001296C5 /* VenturesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturesRouter.swift; sourceTree = "<group>"; };
 		28E1EDF0256069B1001296C5 /* VenturesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturesEntity.swift; sourceTree = "<group>"; };
+		28E2E12625678B7400881B8A /* ExclusionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionVM.swift; sourceTree = "<group>"; };
+		28E2E12D2567BCFA00881B8A /* ConformationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationProtocols.swift; sourceTree = "<group>"; };
+		28E2E12F2567BD1000881B8A /* ConformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationPresenter.swift; sourceTree = "<group>"; };
+		28E2E1312567BD2E00881B8A /* ConformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationView.swift; sourceTree = "<group>"; };
+		28E2E1332567BD7600881B8A /* ConformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConformationView.xib; sourceTree = "<group>"; };
+		28E2E1352567BFE300881B8A /* ConformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationBuilder.swift; sourceTree = "<group>"; };
+		28E2E1372567C07600881B8A /* ConformationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationRouter.swift; sourceTree = "<group>"; };
 		881F7C3724609C86799CBE4A /* Pods-RealEstateApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstateApp.debug.xcconfig"; path = "Target Support Files/Pods-RealEstateApp/Pods-RealEstateApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CED574A63E6BE970985E3323 /* Pods_RealEstateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDEF90F8C015004B798C218 /* Pods-RealEstateApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstateApp.release.xcconfig"; path = "Target Support Files/Pods-RealEstateApp/Pods-RealEstateApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +112,8 @@
 		288226FA254D6AC200D9773B /* RealEstateApp */ = {
 			isa = PBXGroup;
 			children = (
+				28E2E12B2567BC9900881B8A /* Booking */,
+				28E2E1292567BC0900881B8A /* Conformation */,
 				28E1EDF925606C4F001296C5 /* Helpers */,
 				28E1EDF825606C29001296C5 /* ServiceAndDB */,
 				28E1EDF725606C0A001296C5 /* SupportingFiles */,
@@ -112,6 +128,7 @@
 		28E1EDF225606B57001296C5 /* ViperScene */ = {
 			isa = PBXGroup;
 			children = (
+				28E2E12525678B5100881B8A /* VewModel */,
 				28E1EDF325606B85001296C5 /* View */,
 				288226FF254D6AC200D9773B /* VenturesView.swift */,
 				28154C24255EAC950028BED2 /* VentureBuilder.swift */,
@@ -186,6 +203,42 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		28E2E12525678B5100881B8A /* VewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28E2E12625678B7400881B8A /* ExclusionVM.swift */,
+			);
+			path = VewModel;
+			sourceTree = "<group>";
+		};
+		28E2E1292567BC0900881B8A /* Conformation */ = {
+			isa = PBXGroup;
+			children = (
+				28E2E12C2567BCA300881B8A /* ConformationVS */,
+			);
+			path = Conformation;
+			sourceTree = "<group>";
+		};
+		28E2E12B2567BC9900881B8A /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		28E2E12C2567BCA300881B8A /* ConformationVS */ = {
+			isa = PBXGroup;
+			children = (
+				28E2E12D2567BCFA00881B8A /* ConformationProtocols.swift */,
+				28E2E12F2567BD1000881B8A /* ConformationPresenter.swift */,
+				28E2E1312567BD2E00881B8A /* ConformationView.swift */,
+				28E2E1332567BD7600881B8A /* ConformationView.xib */,
+				28E2E1352567BFE300881B8A /* ConformationBuilder.swift */,
+				28E2E1372567C07600881B8A /* ConformationRouter.swift */,
+			);
+			path = ConformationVS;
+			sourceTree = "<group>";
+		};
 		F3D4827FA71A9C56A1B691F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +311,7 @@
 				2882D9AD255BE87900E7076A /* VentureOptionHeader.xib in Resources */,
 				28822708254D6AC900D9773B /* LaunchScreen.storyboard in Resources */,
 				28822705254D6AC900D9773B /* Assets.xcassets in Resources */,
+				28E2E1342567BD7600881B8A /* ConformationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,18 +365,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				28E1EDF1256069B1001296C5 /* VenturesEntity.swift in Sources */,
+				28E2E1302567BD1000881B8A /* ConformationPresenter.swift in Sources */,
 				28822712254D704000D9773B /* Constants.swift in Sources */,
+				28E2E1382567C07600881B8A /* ConformationRouter.swift in Sources */,
 				28822700254D6AC200D9773B /* VenturesView.swift in Sources */,
 				288226FC254D6AC200D9773B /* AppDelegate.swift in Sources */,
 				28154C27255EB4190028BED2 /* VenturesPresenter.swift in Sources */,
+				28E2E1362567BFE300881B8A /* ConformationBuilder.swift in Sources */,
 				28154C25255EAC950028BED2 /* VentureBuilder.swift in Sources */,
 				2882D9AB255BE3CB00E7076A /* VentureOptionCell.swift in Sources */,
 				28DDF2E6255D4AE500F82D8C /* RealmManager.swift in Sources */,
+				28E2E1322567BD2E00881B8A /* ConformationView.swift in Sources */,
 				28822710254D6FFC00D9773B /* NetworkService.swift in Sources */,
+				28E2E12725678B7400881B8A /* ExclusionVM.swift in Sources */,
 				28E1EDEB256052B0001296C5 /* Protocols.swift in Sources */,
 				28DDF2E7255D4AE500F82D8C /* RealmManagerProtocol.swift in Sources */,
 				28E1EDEF25606985001296C5 /* VenturesRouter.swift in Sources */,
 				28E1EDED2560696F001296C5 /* VenturesInteractor.swift in Sources */,
+				28E2E12E2567BCFA00881B8A /* ConformationProtocols.swift in Sources */,
 				288226FE254D6AC200D9773B /* SceneDelegate.swift in Sources */,
 				2882D9AF255BE94000E7076A /* VentureOptionHeader.swift in Sources */,
 			);
